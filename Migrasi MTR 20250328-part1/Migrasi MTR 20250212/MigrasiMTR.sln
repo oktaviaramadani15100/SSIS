@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MigrasiMTR", "MigrasiMTR.dtproj", "{8D59E381-E8CF-4AF1-B225-8114A1614A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D59E381-E8CF-4AF1-B225-8114A1614A4B}.Development|Default.ActiveCfg = Development
+		{8D59E381-E8CF-4AF1-B225-8114A1614A4B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {963988BE-3B5C-4ADE-AB4E-A152A8170E33}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Billing MTR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|solutionrelative:Migrasi Billing MTR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Payment MTR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|solutionrelative:Migrasi Payment MTR.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Main Migrasi.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8D59E381-E8CF-4AF1-B225-8114A1614A4B}|MigrasiMTR.dtproj|solutionrelative:Main Migrasi.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main Migrasi.dtsx [Design]",
+              "DocumentMoniker": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Main Migrasi.dtsx",
+              "RelativeDocumentMoniker": "Main Migrasi.dtsx",
+              "ToolTip": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Main Migrasi.dtsx [Design]",
+              "RelativeToolTip": "Main Migrasi.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-04-11T03:07:41.047Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Migrasi Payment MTR.dtsx [Design]",
+              "DocumentMoniker": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Payment MTR.dtsx",
+              "RelativeDocumentMoniker": "Migrasi Payment MTR.dtsx",
+              "ToolTip": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Payment MTR.dtsx [Design]*",
+              "RelativeToolTip": "Migrasi Payment MTR.dtsx [Design]*",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-03-14T06:49:28.448Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Migrasi Billing MTR.dtsx [Design]",
+              "DocumentMoniker": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Billing MTR.dtsx",
+              "RelativeDocumentMoniker": "Migrasi Billing MTR.dtsx",
+              "ToolTip": "C:\\data okta\\migrasi\\Migrasi MTR 20250328-part2\\Migrasi MTR 20250212\\Migrasi Billing MTR.dtsx [Design]",
+              "RelativeToolTip": "Migrasi Billing MTR.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-03-17T02:57:11.936Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

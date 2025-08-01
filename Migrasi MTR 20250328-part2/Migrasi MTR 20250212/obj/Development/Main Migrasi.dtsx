@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/11/2025 10:07:40 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-GANO9B3"
+  DTS:CreatorName="DESKTOP-GANO9B3\X230"
+  DTS:DTSID="{AA4033C6-8F8A-4122-80D1-25FC26F016F8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{D766D0CB-2AF5-4403-A574-A15DED75F8E1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GANO9B3.DMTM_MTR]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}"
+      DTS:ObjectName="DESKTOP-GANO9B3.DMTM_MTR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}DESKTOP-GANO9B3.DMTM_MTR;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GANO9B3.DMTM_New]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{69F3BB63-B820-4298-A5DF-9213229D44D9}"
+      DTS:ObjectName="DESKTOP-GANO9B3.DMTM_New">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{69F3BB63-B820-4298-A5DF-9213229D44D9}DESKTOP-GANO9B3.DMTM_New;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{32F8E491-D434-43EA-9392-A40C96428F7E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MonthFilter">
+      <DTS:VariableValue
+        DTS:DataType="3">3</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ABE0F2BB-A10E-4074-876C-7C50109B0D19}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="YearFilter">
+      <DTS:VariableValue
+        DTS:DataType="3">2021</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Run_Migrasi20250212"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Run_Migrasi20250212"
+      DTS:DTSID="{65AA9C4E-7680-44FC-9790-D3105D8A9A9C}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run_Migrasi20250212"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
+          <PackageName>Migrasi 20250212.dtsx</PackageName>
+          <ParameterAssignment>
+            <ParameterName>MonthFilter</ParameterName>
+            <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>
+          </ParameterAssignment>
+          <ParameterAssignment>
+            <ParameterName>YearFilter</ParameterName>
+            <BindedVariableOrParameterName>User::YearFilter</BindedVariableOrParameterName>
+          </ParameterAssignment>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Run_Package1"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Run_Package1"
+      DTS:DTSID="{53F9E2F4-F830-43BE-BD6E-DC28DC566436}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run_Package1"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
+          <PackageName>Package1.dtsx</PackageName>
+          <ParameterAssignment>
+            <ParameterName>MonthFilter</ParameterName>
+            <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>
+          </ParameterAssignment>
+          <ParameterAssignment>
+            <ParameterName>YearFilter</ParameterName>
+            <BindedVariableOrParameterName>User::YearFilter</BindedVariableOrParameterName>
+          </ParameterAssignment>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CF7D8FEA-9238-4F41-AB58-639AF0497FCD}"
+      DTS:From="Package\Run_Migrasi20250212"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Run_Package1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Run_Migrasi20250212"
+          TopLeft="263,99" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Run_Package1"
+          TopLeft="555,93" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="454,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101,0"
+              Start="0,0"
+              End="93.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="93.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
