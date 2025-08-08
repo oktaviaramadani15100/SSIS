@@ -8,12 +8,12 @@
   DTS:DTSID="{9F48FEB2-FB93-4411-B906-F96A63913D62}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:VersionBuild="113"
-  DTS:VersionGUID="{E73AF296-8A85-4EE2-9357-A725825A9931}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{B7C6A9EA-5FBB-46D8-BBD0-58172F981A30}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Integrated Security=SSPI;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{6FDB59C6-6AAB-481E-87FD-444141BDCE72}192.168.1.79.DMTM_New.sa;" />
+          DTS:ConnectionString="Data Source=192.168.1.79;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{6FDB59C6-6AAB-481E-87FD-444141BDCE72}192.168.1.79.DMTM_New.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSr/x/yL7CIrT7KOavmgOAQz2+7EbqiAwW97gE4QEXjQAAAAAOgAAAAAIAACAAAADUUfKNrimk66SEdFfSmGy09qLsjTTkic+UXhbEPz4aJyAAAAB3FtdoDlA9T6X24WLdeXmEwvihD3rgVF0/nQaV/e59kEAAAADfJpydp5zAThtQZmKHA4g3KjDRBW5+xQSTVBKa+9D68e7OdFlqWbdmpbb7Jt+YS+ICYBaMln0x4EdhV/UR0g9u</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -38,7 +43,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{B4E0811C-E498-4279-964D-4876F5B01797}192.168.1.79.DMTM_MTR.sa;" />
+          DTS:ConnectionString="Data Source=192.168.1.79;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{B4E0811C-E498-4279-964D-4876F5B01797}192.168.1.79.DMTM_MTR.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA8I+wq0I1lY8bYf2yA5HRQ1fxUEMez6edJQ6cPN8YfRQAAAAAOgAAAAAIAACAAAADSerhdDawwVTyFR4sz5Zs5b577nrTcG567t9ODtOIDAiAAAABqKm+Srjb6NwMjN2yp7+kkiM9jmdVkD1vESnsdNLliiEAAAACJ6FRUpUDnAgG9ncu2lhfZ2p8y1wt3P4xtzz/IS98qT/7Eg2rpX4/ifbyJreAKsRxGG+1B/QU5fxV0eYArt5R3</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -131,16 +141,6 @@
                       cachedLength="4"
                       cachedName="PISCUR"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[billingno]"
-                      cachedDataType="guid"
-                      cachedName="billingno"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[refference]"
-                      cachedDataType="guid"
-                      cachedName="refference"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[refference]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -208,50 +208,6 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of billingno]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of billingno]"
-                      name="Copy of billingno"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of refference]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of refference]"
-                      name="Copy of refference"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[refference]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -374,31 +330,6 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of billingno]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of billingno"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of billingno]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[REPLACE]([REPLACE](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paymentid]},"{",""),"}","")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">REPLACE(REPLACE(paymentid,"{",""),"}","")</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Billingdate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Billingdate"
@@ -484,7 +415,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -954,9 +885,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select NEWID() paymentid, 
-NEWID() billingno,
-NEWID() refference,
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select NEWID() paymentid, 
 paymentdate as Billingdate,
 ISNULL(DATEADD(MONTH, 1, duedate), GETDATE()) AS paidtodate,
  * from
@@ -967,10 +896,10 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
     , 1 'bankid', 'U' Source, CONCAT(CONVERT(VARCHAR, a.newduedate, 3),'-',b.POLICYNO) Reff
     , getdate() 'createdate', 'MigrationMAs' 'createby', PISAMX 'basicpremium'
     from DMTM_MTR.dbo.TFPMMLD a
-    inner join (select policyno, refferenceno from DMTM..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
+    inner join (select policyno, refferenceno from DMTM_New..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
         and createby in ('migration','migrationma')
         and (year(effectivedate) = ? and month(EFFECTIVEDATE)= ?) ) b on a.PISACT COLLATE SQL_Latin1_General_CP1_CI_AS = b.REFFERENCENO COLLATE SQL_Latin1_General_CP1_CI_AS
-    left join (select paymentid, policyno, DUEDATE from DMTM..PAYMENT) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
+    left join (select paymentid, policyno, DUEDATE from DMTM_New..PAYMENT) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
     WHERE LEFT(POPISO,4) = ?
         and (pismtd &gt;= 1900001
         and pismtd &lt; 2023091)
@@ -1224,15 +1153,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       name="Policyno"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[refference]"
-                      dataType="guid"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[refference]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[refference]"
-                      name="refference"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -1249,15 +1169,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[paidtodate]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paidtodate]"
                       name="paidtodate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]"
-                      dataType="guid"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[billingno]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]"
-                      name="billingno"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1370,10 +1281,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       length="15"
                       name="Policyno" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[refference]"
-                      dataType="guid"
-                      name="refference" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Billingdate]"
                       dataType="dbTimeStamp"
                       name="Billingdate" />
@@ -1381,10 +1288,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[paidtodate]"
                       dataType="dbTimeStamp"
                       name="paidtodate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[billingno]"
-                      dataType="guid"
-                      name="billingno" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1398,16 +1301,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLMNTH]"
                       name="PLMNTH"
                       precision="6" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[billingno]"
-                      dataType="guid"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[billingno]"
-                      name="billingno" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[refference]"
-                      dataType="guid"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[refference]"
-                      name="refference" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Billingdate]"
                       dataType="dbTimeStamp"
