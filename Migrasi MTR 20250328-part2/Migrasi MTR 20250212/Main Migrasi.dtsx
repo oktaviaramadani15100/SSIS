@@ -7,12 +7,13 @@
   DTS:CreatorName="DESKTOP-GANO9B3\X230"
   DTS:DTSID="{AA4033C6-8F8A-4122-80D1-25FC26F016F8}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{D766D0CB-2AF5-4403-A574-A15DED75F8E1}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{036ED181-2285-467F-8689-9B0258D987EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
