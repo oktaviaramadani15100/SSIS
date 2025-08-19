@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="69"
-  DTS:VersionGUID="{D14DE234-EB8B-4F0A-9EA8-B8579C835474}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{B56EDABD-18D3-4EC0-89B0-FFBEE1A44EE0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADPlnkStrVGATR9W1i797WA/eKjS9ls+HINdSvF3G4r5AAAAAAOgAAAAAIAACAAAADGG+pyVoa6ltlNvDDaUN1SdwlmAboEdfT2WO1oP2gJohAAAAA6wL45kacOsdvHRFOhZvwuQAAAAIzqT25uPGpJMncxIyiUqeGvJ8EMqC1IpF58Ly95tBY66yR5VQiO0r914RXsJZUjqhejV9SNiGxfCnEIhrsyigc</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbvLBfLnsGMtAC6jfYhQNrXZpJWnpiMFL6wK9Y/u/0WgAAAAAOgAAAAAIAACAAAACV7FHvj6frGTRBIzeXS47BXkAku0eZjRLBgdiNMKpFWhAAAABFlq03NYurT8Znh337VswUQAAAAOp5nfakHIC1yCvoWH0xFQwoKSrZ6Cdqe4Gps8feRLrpNb06V7awm3d0q0uEcJfWzP94xGxKBO5ur/6WFxDY7yw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQkrLVUZHf+ickeYd6iOPjMvipBEWbOxvZPvFzLpH6kwAAAAAOgAAAAAIAACAAAABq/sgsTgdts0zKvmi86jreCZYJCzLnbRgj4nz7DjO73BAAAABlbBzui45wAScjKD7/frIPQAAAAMGdVIBiBF8y7ryQFkGyNEHmvrRe2TrRiK+gAeQdLkNpYqeteLSSNI8u3+Wf/gQPXzzdVWnSL/rvD6+GF+kzrrY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA7tNAnz5vFjDcn/FukCoSjYEBvyyFMDVSowLAkBGrokQAAAAAOgAAAAAIAACAAAABcK5fvqCPb4kwtb8E4+vfnWbMI9MfcxnzxKr30ZJL/khAAAAB0rPEBEvPKUMb8OMdqihvVQAAAALN+lKcAKQYJCW+uvaozhpgRHRwvFMWoCkD9vnxyL74hQmqI2dFx6RnCplNre53fLFTxn2CN21xoyyJdksiwLMk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -260,7 +260,25 @@
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="PISCUR"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]" />
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(PISCUR)</property>
+                      </properties>
+                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PaymentId]"
                       cachedCodepage="1252"
@@ -310,31 +328,6 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of PISCUR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="Copy of PISCUR"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISCUR]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(PISCUR)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of billingno]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -380,7 +373,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}</property>
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
