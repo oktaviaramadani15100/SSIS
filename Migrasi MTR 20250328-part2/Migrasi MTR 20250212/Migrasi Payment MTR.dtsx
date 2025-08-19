@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:VersionBuild="121"
-  DTS:VersionGUID="{76645DD3-8C1A-4480-8872-0ADA6FE76350}">
+  DTS:VersionBuild="122"
+  DTS:VersionGUID="{1756D8F9-3676-40F7-9EBC-853484C8248A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA03EgqRJGxnhfabOY9nbjHoNPmBhpPCirIrhUMkZ7j+QAAAAAOgAAAAAIAACAAAAAN/2ivp2iCmkZJ3zPhTn6Uvuz6p2G29ZGgmUqkHL8RlRAAAABML8Cwrpif08SAjWnktzqVQAAAAL3cAAFxrjAGDMoIq+gzaJaydTpl5HAbbBii6VzLIk+8RJELGkZj1wcvgY/dFl/XUOADBoF0WSOYHj8XxaCeP4I</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAjcfM9nVYeAR8CS8s7KfIZj8+LpXq3DQKUoLF3imOkrQAAAAAOgAAAAAIAACAAAAAdTzFoKB1VnnQy+9AB6iZeTk3ZUTUNK2rYmepvSvvp6xAAAAAekZubfGe6RjX+2iZ6PY59QAAAAH1ZhKcg7DEd6FjVatlXy+F2MJ70+0yIIuXTgQLhVjv0H+VgqC4FmyE68fjabJyVdQWqwIH1gAzFDoQd7MiQHuA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -47,7 +47,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcz9RX/0tHjLiyL276u8eILRRALom18OJYqqQrkuStuQAAAAAOgAAAAAIAACAAAAAAC4OdkHoKttppszoyvyJyu6jHZvXeZGAes+z1l81rQxAAAADQk+RWGn+437msRIvt7hogQAAAAFcnmOLMFMMjDHzTK6Vvt0QStVSRy9uyLEClgZF9gs2Q7JUd3d07c060VyVJkvr1BVd4rwwKm4ZN756HTsj30no</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAApFhyKrp/muzhqsVj2P7LSwGfe5r1Cl4uTz53IrsqvjQAAAAAOgAAAAAIAACAAAABNhDL+5uGzYg1NhgedemudJuEeuN/pEGpFnCjKXB7maBAAAACrvvVXIpdLBkrd6VtvaC7PQAAAAOJVSleIZHUxppweGeG0DpFtLrl96yEAAq2nSWufz/l6XYyjEFBUwKWd6del5j9jtqvoEXSrIjq+ETuyXY/6fSA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -895,7 +895,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
     , PISCUR, PISAMX, PISAFX    , a.paymentdate, newduedate 'duedate'
     , 'M' ModeId, 'DBB' MethodId, 'PAI' StatusId, 'PRM' TypeId, 1 'MonthsPaid'
     , 1 'bankid', 'U' Source, CONCAT(CONVERT(VARCHAR, a.newduedate, 3),'-',b.POLICYNO) Reff
-    , getdate() 'createdate', 'MigrationMAs' 'createby', PISAMX 'basicpremium'
+    , getdate() 'createdate', 'migrationma' 'createby', PISAMX 'basicpremium'
     from DMTM_MTR.dbo.TFPMMLD a
     inner join (select policyno, refferenceno from DMTM_New..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
         and createby in ('migration','migrationma')
