@@ -12,9 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="0"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{B4BC1CEB-673F-4F10-99DE-26740E7B44B4}">
+  DTS:VersionBuild="121"
+  DTS:VersionGUID="{76645DD3-8C1A-4480-8872-0ADA6FE76350}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,10 +26,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=192.168.1.79;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{6FDB59C6-6AAB-481E-87FD-444141BDCE72}192.168.1.79.DMTM_New.sa;">
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Persist Security Info=True;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{6FDB59C6-6AAB-481E-87FD-444141BDCE72}192.168.1.79.DMTM_New.sa;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"></DTS:Password>
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA03EgqRJGxnhfabOY9nbjHoNPmBhpPCirIrhUMkZ7j+QAAAAAOgAAAAAIAACAAAAAN/2ivp2iCmkZJ3zPhTn6Uvuz6p2G29ZGgmUqkHL8RlRAAAABML8Cwrpif08SAjWnktzqVQAAAAL3cAAFxrjAGDMoIq+gzaJaydTpl5HAbbBii6VzLIk+8RJELGkZj1wcvgY/dFl/XUOADBoF0WSOYHj8XxaCeP4I</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -43,10 +43,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=192.168.1.79;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{B4E0811C-E498-4279-964D-4876F5B01797}192.168.1.79.DMTM_MTR.sa;">
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Persist Security Info=True;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{B4E0811C-E498-4279-964D-4876F5B01797}192.168.1.79.DMTM_MTR.sa;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"></DTS:Password>
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcz9RX/0tHjLiyL276u8eILRRALom18OJYqqQrkuStuQAAAAAOgAAAAAIAACAAAAAAC4OdkHoKttppszoyvyJyu6jHZvXeZGAes+z1l81rQxAAAADQk+RWGn+437msRIvt7hogQAAAAFcnmOLMFMMjDHzTK6Vvt0QStVSRy9uyLEClgZF9gs2Q7JUd3d07c060VyVJkvr1BVd4rwwKm4ZN756HTsj30no</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2237,13 +2238,17 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="656,165" />
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="283,253" />
         <NodeLayout
           Size="177,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="906,169" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="656,165" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
@@ -2252,6 +2257,74 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
           Size="157,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="127,167" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="347,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.5,-47"
+              Start="0,0"
+              End="138.5,-39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.2530120481928" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.2530120481928"
+                    Point2="0,-19.2530120481928"
+                    Point3="4,-19.2530120481928" />
+                  <mssgle:LineSegment
+                    End="134.5,-19.2530120481928" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.5,-19.2530120481928"
+                    Point2="138.5,-19.2530120481928"
+                    Point3="138.5,-23.2530120481928" />
+                  <mssgle:LineSegment
+                    End="138.5,-39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="205.5,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.5,44"
+              Start="0,0"
+              End="126.5,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="122.5,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.5,22"
+                    Point2="126.5,22"
+                    Point3="126.5,26" />
+                  <mssgle:LineSegment
+                    End="126.5,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="814,188">
@@ -2288,78 +2361,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                   Capacity="5">
                   <mssgle:LineSegment
                     End="82.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="283,253" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="205.5,209">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="126.5,44"
-              Start="0,0"
-              End="126.5,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18"
-                    Point2="0,22"
-                    Point3="4,22" />
-                  <mssgle:LineSegment
-                    End="122.5,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="122.5,22"
-                    Point2="126.5,22"
-                    Point3="126.5,26" />
-                  <mssgle:LineSegment
-                    End="126.5,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="347,253">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="138.5,-47"
-              Start="0,0"
-              End="138.5,-39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.2530120481928" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.2530120481928"
-                    Point2="0,-19.2530120481928"
-                    Point3="4,-19.2530120481928" />
-                  <mssgle:LineSegment
-                    End="134.5,-19.2530120481928" />
-                  <mssgle:CubicBezierSegment
-                    Point1="134.5,-19.2530120481928"
-                    Point2="138.5,-19.2530120481928"
-                    Point3="138.5,-23.2530120481928" />
-                  <mssgle:LineSegment
-                    End="138.5,-39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
