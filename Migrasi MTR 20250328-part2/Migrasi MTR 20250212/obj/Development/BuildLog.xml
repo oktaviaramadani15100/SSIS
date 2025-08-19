@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
-<BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>MigrasiMTR</Name>
-    <LastWriteTime>2025-04-11T08:16:16.2255408Z</LastWriteTime>
+    <LastWriteTime>2025-08-19T09:13:32.6270524Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Migrasi Payment MTR.dtsx</Name>
-      <LastWriteTime>2025-05-16T03:20:39.4941217Z</LastWriteTime>
+      <LastWriteTime>2025-08-19T09:12:52.7146178Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Migrasi Billing MTR.dtsx</Name>
-      <LastWriteTime>2025-04-11T08:13:26.2810964Z</LastWriteTime>
+      <LastWriteTime>2025-08-19T09:13:27.4597868Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main Migrasi.dtsx</Name>
-      <LastWriteTime>2025-04-11T08:15:34.9946838Z</LastWriteTime>
+      <LastWriteTime>2025-08-19T09:07:38.9356972Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

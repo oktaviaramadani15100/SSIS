@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{465F4A69-E3C9-4ACB-A1CD-5E0EC95468F1}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{B56EDABD-18D3-4EC0-89B0-FFBEE1A44EE0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABQj2MwhVAZIA40nhdnPkKCQ303sXmxoHJsvOHr3GQi0AAAAAAOgAAAAAIAACAAAACxZcjZRCvNqKhDpFQpTeWTpomsLuwHwzo1hHqqayIrMhAAAAA2z/bojUruluym6U+Wz8J/QAAAAKSribjSr5LCPNIiknS3/Ac79aIS5qtUA8nWSYahZOCeewyF5inHa6U4ff/8RRN5LQd1+E9NWWXvftHUXO2y3jQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeJELuBSvvhUDbpGvVQe2C5p/AukgQeMJOc37rYS33swAAAAAOgAAAAAIAACAAAACS/DlAm8q3Op/U4Oc8A5aNeytkD/0KRY7X3f/K080hXRAAAADF9T9U6KNztNFwqJzMcMHLQAAAADN6jXvZqV+ke8QVFDNmfDy13tIMhQsevYDaWnK78WbidKTbFSqt6mssUZ7txIMubsPH8c+RIROkr4aLFM7Kltw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA/tHIv/NPKI7J/NDd3Io2z3MPSN00mud1TTbnmAO5J1AAAAAAOgAAAAAIAACAAAADK5XH4mQj0yCcPFavKumo7oK3gRcVhFiY4cK8QF3bM/RAAAACnqo31YIdIXrDqmc4+lLnrQAAAAAEn6JUW2LKos8Wf15+1c5tHkFUIfLWKVmhHiCpOB6MdxqZgj0y4X1P8j03s7oKJ8D5GJqYagZpW7yI9aVoLck8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACrWl5gAaSA1JeIQCQeGhDxmNKn00TAPHfH4NmpSVJWYgAAAAAOgAAAAAIAACAAAACJQa/F4rwXZprMRT7w9tLnhZimpZtm7z4VYEhxB6PAohAAAADDJ5QOgFLj8ZNEFiq0jV5LQAAAAEV+p3elDY/aYDXu+oB9QdhWxFE0+3hHPwxwE+s5AMZXVOOxN6qWd5kDuOjrgsJOy/R20sWdyDSBLiYo0ZcuKrE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -260,7 +260,25 @@
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="PISCUR"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]" />
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(PISCUR)</property>
+                      </properties>
+                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PaymentId]"
                       cachedCodepage="1252"
@@ -310,31 +328,6 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of PISCUR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="Copy of PISCUR"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISCUR]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(PISCUR)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of billingno]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -380,7 +373,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}</property>
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -875,8 +868,8 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
     inner join (select policyno, refferenceno from DMTM_New..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
         and createby in ('migration','migrationma')
         and (year(effectivedate) = ? and month(EFFECTIVEDATE)= ?) ) b on a.PISACT COLLATE SQL_Latin1_General_CP1_CI_AS = b.REFFERENCENO COLLATE SQL_Latin1_General_CP1_CI_AS
-    left join (select paymentid, policyno, DUEDATE from DMTM..PAYMENT) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
-    left join (select BILLINGNO, policyno, DUEDATE, PAYMENTID from DMTM..BILLING) d on d.POLICYNO = b.POLICYNO and c.PAYMENTID = d.PAYMENTID and d.DUEDATE = a.newduedate
+    left join (select paymentid, policyno, DUEDATE from DMTM_New..PAYMENT_TEST) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
+    left join (select BILLINGNO, policyno, DUEDATE, PAYMENTID from DMTM_New..BILLING_TEST) d on d.POLICYNO = b.POLICYNO and c.PAYMENTID = d.PAYMENTID and d.DUEDATE = a.newduedate
     WHERE LEFT(POPISO,4) = ?
         and (pismtd &gt;= 1900001
         and pismtd &lt; 2023091)
@@ -1248,7 +1241,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[createby]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="11"
                       name="createby" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[basicpremium]"
@@ -1421,7 +1414,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createby]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="11"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createby]"
                       name="createby" />
                     <outputColumn

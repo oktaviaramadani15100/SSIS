@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-GANO9B3\X230"
   DTS:DTSID="{AA4033C6-8F8A-4122-80D1-25FC26F016F8}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{D766D0CB-2AF5-4403-A574-A15DED75F8E1}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{4F41D585-7770-4267-8F7A-F4947400EC99}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}DESKTOP-GANO9B3.DMTM_MTR;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}DESKTOP-GANO9B3.DMTM_MTR;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADw2Kk+QVpZUXiUu5+zwJClUrpflpceP7I8GTtB4VsZ8wAAAAAOgAAAAAIAACAAAAAEQ0E6L6YQUKoTO0V/Fmv4LG+ByN1ppeewaFymY5DJUhAAAABGgFiS44DkvWTfeMOKLgXiQAAAACnj0WwcxD7fh8m/wo7BJ9iz7W5WoqqbsCYQom16I59XzO9/B0/qn2qH+Guy/dM+xg1UWtgTrD5FPvKFnSTkVrw</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +42,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-GANO9B3;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{69F3BB63-B820-4298-A5DF-9213229D44D9}DESKTOP-GANO9B3.DMTM_New;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{69F3BB63-B820-4298-A5DF-9213229D44D9}DESKTOP-GANO9B3.DMTM_New;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAn/e2sX/bU9A+ede59e8j+XJo0ZFjjsGRuaLZQgcRJAAAAAAOgAAAAAIAACAAAAB9B9j6XWpfKNErxuj7gg/+aQImBziV6bp35Iiwod+ZHxAAAAAWhqCODRxmL1j86jbjsV9PQAAAAGuPA9K0CaV3naUi+6J2p/V+sTYoMY5Ja6vnsrAnlIxlQxj2FMuEsGywOxUO4ebaowPZTFxcmQM20gTtBZlbj7U</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -76,7 +86,7 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
-          <PackageName>Migrasi 20250212.dtsx</PackageName>
+          <PackageName>Migrasi Payment MTR.dtsx</PackageName>
           <ParameterAssignment>
             <ParameterName>MonthFilter</ParameterName>
             <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>
@@ -102,7 +112,7 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
-          <PackageName>Package1.dtsx</PackageName>
+          <PackageName>Migrasi Billing MTR.dtsx</PackageName>
           <ParameterAssignment>
             <ParameterName>MonthFilter</ParameterName>
             <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>

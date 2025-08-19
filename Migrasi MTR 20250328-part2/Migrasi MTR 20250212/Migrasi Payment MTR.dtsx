@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:VersionBuild="122"
-  DTS:VersionGUID="{1756D8F9-3676-40F7-9EBC-853484C8248A}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{C1FCC9BA-2B0D-4795-B27D-5EC06F9B8E53}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAjcfM9nVYeAR8CS8s7KfIZj8+LpXq3DQKUoLF3imOkrQAAAAAOgAAAAAIAACAAAAAdTzFoKB1VnnQy+9AB6iZeTk3ZUTUNK2rYmepvSvvp6xAAAAAekZubfGe6RjX+2iZ6PY59QAAAAH1ZhKcg7DEd6FjVatlXy+F2MJ70+0yIIuXTgQLhVjv0H+VgqC4FmyE68fjabJyVdQWqwIH1gAzFDoQd7MiQHuA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADBReNUP+38NerUx06ntBcI/fwZc2Xi1CKFMRrDJLLJUQAAAAAOgAAAAAIAACAAAADt6FK7YnGlEjcpjNP/v+6SdZ6lifIlXpuJmfpKB3PSLxAAAACw8l2B99x/sxH0ZOtoOAekQAAAAEQrQprR1Rw4UK8ehLz9xj/6FhavJaV7NMsaCQWUiCncaXtUjVMUMB2C+Sad/WxH7/nSz2vWDdIs47hNF+b9eQs</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -47,7 +47,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAApFhyKrp/muzhqsVj2P7LSwGfe5r1Cl4uTz53IrsqvjQAAAAAOgAAAAAIAACAAAABNhDL+5uGzYg1NhgedemudJuEeuN/pEGpFnCjKXB7maBAAAACrvvVXIpdLBkrd6VtvaC7PQAAAAOJVSleIZHUxppweGeG0DpFtLrl96yEAAq2nSWufz/l6XYyjEFBUwKWd6del5j9jtqvoEXSrIjq+ETuyXY/6fSA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAPyvIIkc7A3KnGMko3E+0CkVUAX5FOdGX2N/wSOv/dpgAAAAAOgAAAAAIAACAAAAC8mF56+FcDNlPs7tfIwDHG0HW+OAz3X98v2xHBBgQXgBAAAAC0aCBVjHwVe3dzh6paiYDHQAAAACQ8iw5WgZY0o7e6acS5bOe0z55nM4naQvyQvQIg7d1z8Lhr6cEw2tX1mwt/MdGEKroB9u930Qi0uWqJfURB+pc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -900,7 +900,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
     inner join (select policyno, refferenceno from DMTM_New..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
         and createby in ('migration','migrationma')
         and (year(effectivedate) = ? and month(EFFECTIVEDATE)= ?) ) b on a.PISACT COLLATE SQL_Latin1_General_CP1_CI_AS = b.REFFERENCENO COLLATE SQL_Latin1_General_CP1_CI_AS
-    left join (select paymentid, policyno, DUEDATE from DMTM..PAYMENT) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
+    left join (select paymentid, policyno, DUEDATE from DMTM_New..PAYMENT_TEST) c on c.POLICYNO = b.POLICYNO and c.DUEDATE = a.newduedate
     WHERE LEFT(POPISO,4) = ?
         and (pismtd &gt;= 1900001
         and pismtd &lt; 2023091)
@@ -1263,7 +1263,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[createby]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="11"
                       name="createby" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[basicpremium]"
@@ -1418,7 +1418,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createby]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="11"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createby]"
                       name="createby" />
                     <outputColumn
