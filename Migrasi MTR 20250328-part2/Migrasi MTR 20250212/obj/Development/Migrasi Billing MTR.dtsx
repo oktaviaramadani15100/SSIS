@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="70"
-  DTS:VersionGUID="{B56EDABD-18D3-4EC0-89B0-FFBEE1A44EE0}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{0BBB8685-C842-44A9-8791-D81BBB44DE8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbvLBfLnsGMtAC6jfYhQNrXZpJWnpiMFL6wK9Y/u/0WgAAAAAOgAAAAAIAACAAAACV7FHvj6frGTRBIzeXS47BXkAku0eZjRLBgdiNMKpFWhAAAABFlq03NYurT8Znh337VswUQAAAAOp5nfakHIC1yCvoWH0xFQwoKSrZ6Cdqe4Gps8feRLrpNb06V7awm3d0q0uEcJfWzP94xGxKBO5ur/6WFxDY7yw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACn4OHZYxDlPt7SsYj302p0NcoycZn7YRlv7XSVwHGdqQAAAAAOgAAAAAIAACAAAAC335ffFFyZcz45mXoF8mZchFcMomJrezO+gEUCSGpouhAAAAAbR2QsY5maZCN4l0kNDcVWQAAAAAYvaSu+RT+8dE/nPFQRvd6aaSGqUvtvqOjBG4hqsM+SAHx0fA11e30kpM8Aj8mysKt+ydti+W+b2frNjnqFCtQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA7tNAnz5vFjDcn/FukCoSjYEBvyyFMDVSowLAkBGrokQAAAAAOgAAAAAIAACAAAABcK5fvqCPb4kwtb8E4+vfnWbMI9MfcxnzxKr30ZJL/khAAAAB0rPEBEvPKUMb8OMdqihvVQAAAALN+lKcAKQYJCW+uvaozhpgRHRwvFMWoCkD9vnxyL74hQmqI2dFx6RnCplNre53fLFTxn2CN21xoyyJdksiwLMk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABbslIA7eseD07gS0T3+5ZjtpHoz4FAU0lCYorbvca7AAAAAAOgAAAAAIAACAAAACdjl+ZT8V6o2bEu3V5J8iFvASA5t7729gh4GrS8G3b5xAAAAD1pbACYcUQGU0nU57Zv7LbQAAAACVCMQ4HbjGYKovjM25xjsDpGS7rDsLxhBIvCTHseb0dSsasEYnY0arbfFMfiFHGsWFN2IBt0+F2vqYdttqn6qE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -126,19 +126,19 @@
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="PISCUR"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[billingno]"
                       cachedDataType="guid"
                       cachedName="billingno"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[billingno]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PISAMX]"
                       cachedDataType="numeric"
                       cachedName="PISAMX"
                       cachedPrecision="17"
                       cachedScale="2"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -165,7 +165,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -187,7 +187,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[billingno]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -207,7 +207,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -255,31 +255,6 @@
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PISCUR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="PISCUR"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(PISCUR)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PaymentId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -287,7 +262,7 @@
                       cachedName="PaymentId"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PaymentId]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaymentId]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -295,7 +270,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[REPLACE]([REPLACE](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PaymentId]},"{",""),"}","")</property>
+                          name="Expression">[REPLACE]([REPLACE](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaymentId]},"{",""),"}","")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -310,7 +285,7 @@
                       cachedName="Billingdate"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -318,7 +293,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]}) ? (DT_DBTIMESTAMP)[GETDATE]() : #{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]}</property>
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]}) ? (DT_DBTIMESTAMP)[GETDATE]() : #{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -353,13 +328,6 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PISAMX]"
-                      cachedDataType="numeric"
-                      cachedName="PISAMX"
-                      cachedPrecision="17"
-                      cachedScale="2"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of PISAMX]"
                       cachedDataType="r8"
                       cachedName="Copy of PISAMX"
@@ -373,13 +341,38 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]}</property>
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISAMX]}) ? "0" : (DT_WSTR,50)#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISAMX]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(PISAMX) ? "0" : (DT_WSTR,50)PISAMX</property>
+                          name="FriendlyExpression">ISNULL([Copy of PISAMX]) ? "0" : (DT_WSTR,50)[Copy of PISAMX]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Copy of PISCUR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Copy of PISCUR"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISCUR]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PISCUR]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Copy of PISCUR])</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -497,14 +490,13 @@
                       cachedDataType="dbTimeStamp"
                       cachedName="paymentdate"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYMENTDATE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paymentdate]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paymentdate]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duedate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="duedate"
-                      cachedSortKeyPosition="-2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DUEDATE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[duedate]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[duedate]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StatusId]"
                       cachedCodepage="1252"
@@ -512,13 +504,13 @@
                       cachedLength="3"
                       cachedName="StatusId"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUSID]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StatusId]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[StatusId]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[createdate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="createdate"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createdate]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[createby]"
                       cachedCodepage="1252"
@@ -526,7 +518,7 @@
                       cachedLength="12"
                       cachedName="createby"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEBY]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createby]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createby]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[basicpremium]"
                       cachedDataType="numeric"
@@ -534,7 +526,7 @@
                       cachedPrecision="17"
                       cachedScale="2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BASICPREMIUM]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[basicpremium]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[basicpremium]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaymentId]"
                       cachedCodepage="1252"
@@ -542,7 +534,7 @@
                       cachedLength="50"
                       cachedName="PaymentId"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYMENTID]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PaymentId]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaymentId]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Policyno]"
                       cachedCodepage="1252"
@@ -550,19 +542,19 @@
                       cachedLength="15"
                       cachedName="Policyno"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POLICYNO]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Policyno]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Policyno]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Billingdate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Billingdate"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BILLINGDATE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[paidtodate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="paidtodate"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAIDTODATE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paidtodate]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paidtodate]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of billingno]"
                       cachedCodepage="1252"
@@ -592,7 +584,7 @@
                       cachedLength="3"
                       cachedName="TypeId"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TYPEID]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TypeId]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TypeId]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reff]"
                       cachedCodepage="1252"
@@ -600,7 +592,7 @@
                       cachedLength="46"
                       cachedName="Reff"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REFFERENCE]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Reff]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Reff]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1441,771 +1433,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PLMNTH]"
-                      cachedDataType="numeric"
-                      cachedName="PLMNTH"
-                      cachedPrecision="6"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PLMNTH]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PISACT]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="19"
-                      cachedName="PISACT"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISACT]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PISCUR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="PISCUR"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PISAMX]"
-                      cachedDataType="numeric"
-                      cachedName="PISAMX"
-                      cachedPrecision="17"
-                      cachedScale="2"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PISAFX]"
-                      cachedDataType="numeric"
-                      cachedName="PISAFX"
-                      cachedPrecision="17"
-                      cachedScale="2"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAFX]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[paymentdate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="paymentdate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paymentdate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[duedate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="duedate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[duedate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">-2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[ModeId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="ModeId"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeId]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[MethodId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="MethodId"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MethodId]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[StatusId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="StatusId"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[StatusId]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[TypeId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="TypeId"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TypeId]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[MonthsPaid]"
-                      cachedDataType="i4"
-                      cachedName="MonthsPaid"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MonthsPaid]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[bankid]"
-                      cachedDataType="i4"
-                      cachedName="bankid"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[bankid]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Source]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="Source"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Source]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Reff]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="46"
-                      cachedName="Reff"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Reff]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[createdate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="createdate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[createby]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="12"
-                      cachedName="createby"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createby]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[basicpremium]"
-                      cachedDataType="numeric"
-                      cachedName="basicpremium"
-                      cachedPrecision="17"
-                      cachedScale="2"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[basicpremium]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Policyno]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Policyno"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Policyno]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[billingno]"
-                      cachedDataType="guid"
-                      cachedName="billingno"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Billingdate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Billingdate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[paidtodate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="paidtodate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paidtodate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PaymentId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PaymentId"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaymentId]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PLMNTH]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PLMNTH]"
-                      name="PLMNTH"
-                      precision="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PLMNTH]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISACT]"
-                      codePage="1252"
-                      dataType="str"
-                      length="19"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISACT]"
-                      name="PISACT"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISACT]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISCUR]"
-                      name="PISCUR">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISCUR]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAMX]"
-                      name="PISAMX"
-                      precision="17"
-                      scale="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAMX]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAFX]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PISAFX]"
-                      name="PISAFX"
-                      precision="17"
-                      scale="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PISAFX]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paymentdate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paymentdate]"
-                      name="paymentdate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paymentdate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[duedate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[duedate]"
-                      name="duedate"
-                      sortKeyPosition="-2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[duedate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ModeId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="1"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ModeId]"
-                      name="ModeId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModeId]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[MethodId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[MethodId]"
-                      name="MethodId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MethodId]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StatusId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StatusId]"
-                      name="StatusId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[StatusId]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TypeId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TypeId]"
-                      name="TypeId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TypeId]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[MonthsPaid]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[MonthsPaid]"
-                      name="MonthsPaid">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MonthsPaid]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[bankid]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[bankid]"
-                      name="bankid">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[bankid]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Source]"
-                      codePage="1252"
-                      dataType="str"
-                      length="1"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Source]"
-                      name="Source">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Source]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Reff]"
-                      codePage="1252"
-                      dataType="str"
-                      length="46"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Reff]"
-                      name="Reff">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Reff]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createdate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createdate]"
-                      name="createdate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createby]"
-                      codePage="1252"
-                      dataType="str"
-                      length="12"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[createby]"
-                      name="createby">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[createby]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[basicpremium]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[basicpremium]"
-                      name="basicpremium"
-                      precision="17"
-                      scale="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[basicpremium]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Policyno]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Policyno]"
-                      name="Policyno">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Policyno]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[billingno]"
-                      dataType="guid"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[billingno]"
-                      name="billingno">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[billingno]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Billingdate]"
-                      name="Billingdate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Billingdate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paidtodate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[paidtodate]"
-                      name="paidtodate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paidtodate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PaymentId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PaymentId]"
-                      name="PaymentId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PaymentId]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -2220,14 +1447,9 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2256,19 +1478,7 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="116,115" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="283,213" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="964,113" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
@@ -2277,66 +1487,28 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT, c.PaymentId
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="397,112" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="347,213">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="130.5,-59"
-              Start="0,0"
-              End="130.5,-51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-20.1686746987952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-20.1686746987952"
-                    Point2="0,-24.1686746987952"
-                    Point3="4,-24.1686746987952" />
-                  <mssgle:LineSegment
-                    End="126.5,-24.1686746987952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="126.5,-24.1686746987952"
-                    Point2="130.5,-24.1686746987952"
-                    Point3="130.5,-28.1686746987952" />
-                  <mssgle:LineSegment
-                    End="130.5,-51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="116,115" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="964,113" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="194.5,157">
+          TopLeft="273,134.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="137.5,56"
+              EndConnector="124,0"
               Start="0,0"
-              End="137.5,48.5">
+              End="116.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="4,28" />
-                  <mssgle:LineSegment
-                    End="133.5,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="133.5,28"
-                    Point2="137.5,28"
-                    Point3="137.5,32" />
-                  <mssgle:LineSegment
-                    End="137.5,48.5" />
+                    End="116.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

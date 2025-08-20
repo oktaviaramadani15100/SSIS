@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E56D8B3F-234F-43CA-8D6A-CBC743E162C5}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C6FC0A1C-A2DD-4D17-9A82-148A27D901DF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABENl1I1J8gfi/IZUUVwhtFgi0LKOd050C2+Tq0eiAH2QAAAAAOgAAAAAIAACAAAADZ2zR1QxL4HMeYJmWNrObnOZxRWuI5DD7URDDnn/ihMRAAAABaJoIH+3Tpfarh063aN7+7QAAAAEc2OIP2wCCrGTtn8Q1vM5+YIFPKApmOuQIQmfUeCpjRTRXvwGVLYZGxfIOELXYQQagpfeTEriqcn8xuyhm8NRY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADfJaOEiiozmh1R6P1V17ZNwySfytc8SAwAlOdxU3xkQwAAAAAOgAAAAAIAACAAAABsFJ8dltiXh17pKLLSOqZ+Hd+FS1y1LebGwgabyzEoWhAAAACUcLFvLck5eADGxQKu/VCWQAAAAMr0MwoBUgueDdbHZH0d94KFYv9VggbSL+JG7fBXIeaA6jKZuunafYX3shAPhXAZRFMZYqSHkN+dzxYLmuZvUSI</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwHFAsZihGe3Hb5yTe8J7Q+8OgmjZgpzsrcDw7CObFowAAAAAOgAAAAAIAACAAAAAWbExWBoWmdSHmmk2/EZpy1KhDaszhFIyzpgjfTXJphxAAAACuxzyX4ufVyWkosuDVYI6SQAAAAAfYL7J29Cl8SPXyyUgv9fuxbx3LBISSSnbTNlr3J0ZP2Ro6Cc1IR8qb4fPBYxjkTrm55anSAb9p+8tIjSxFVbA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6hHRtbwJsaJbofLFcDtclgS/75Fp13zQWowXiSkaStwAAAAAOgAAAAAIAACAAAADKcLX1q6U/QqAchoubx9IK7ZavUwmK88fXBcaHngZM1RAAAAA+xwOSLg/SUJQiSIZvAD8QQAAAAFQHGjz9NA29T/9NqJj7IpIYTsOWFi5x1ceyjqC7ANOotHJSm87may1bX3UgAxb6FWZgLchzWiCx1y3E36/lIOA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -98,43 +98,7 @@
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Run_Package1"
-      DTS:CreationName="Microsoft.ExecutePackageTask"
-      DTS:Description="Run_Package1"
-      DTS:DTSID="{53F9E2F4-F830-43BE-BD6E-DC28DC566436}"
-      DTS:ExecutableType="Microsoft.ExecutePackageTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Run_Package1"
-      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <ExecutePackageTask>
-          <UseProjectReference>True</UseProjectReference>
-          <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
-          <PackageName>Migrasi Billing MTR.dtsx</PackageName>
-          <ParameterAssignment>
-            <ParameterName>MonthFilter</ParameterName>
-            <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>
-          </ParameterAssignment>
-          <ParameterAssignment>
-            <ParameterName>YearFilter</ParameterName>
-            <BindedVariableOrParameterName>User::YearFilter</BindedVariableOrParameterName>
-          </ParameterAssignment>
-        </ExecutePackageTask>
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{CF7D8FEA-9238-4F41-AB58-639AF0497FCD}"
-      DTS:From="Package\Run_Migrasi20250212"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Run_Package1" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -146,37 +110,11 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="191,42"
           Id="Package\Run_Migrasi20250212"
           TopLeft="263,99" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Run_Package1"
-          TopLeft="555,93" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="454,117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="101,0"
-              Start="0,0"
-              End="93.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="93.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
