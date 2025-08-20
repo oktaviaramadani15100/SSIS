@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:VersionBuild="124"
-  DTS:VersionGUID="{01B7A474-85D8-4A45-895B-A5C19278A375}">
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{27F2B2A7-E102-455A-9D30-F9F0A72CC27C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD3wlWYtB/Z4wCSNNzaZM8jagw6IJ9G+duWikvO3nEuZAAAAAAOgAAAAAIAACAAAADC5KJEEyRyzHuKqMj00U5p8Xb9sOXekqWkmx770MqNqBAAAAD0CMKFSM8DE06vcORhdoM4QAAAANIL+CJhCtjxnkUuKEM0UA8C39PadIv8DJiP4OULSwe+WFm2BoPTKtMlawgYeH33m8nBp9OgbBnWDLLqm8QyMIg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABNtdtEmvCojlWyEiTk/ruC6TCQqQEbZhQhUXdNDAr+tAAAAAAOgAAAAAIAACAAAABLxVcNkSc+opV/GSFF4m9wO7wElogeiez09/y+w+Cs1BAAAAC4hW5ktAxE0DuR9ElPeTM1QAAAAI01S1Zi9cJDYN2DZHXIZMn39YgoYAHjXs0f3ca38OFXOanoQDnxjruMnVoiYSeekSOsbsfMPn1/STsy1HZmxTE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -47,7 +47,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABMidK8PyCqtaZ06QfL2gRZyIoSZ78mgTddDKI8cC7LUgAAAAAOgAAAAAIAACAAAAAP64jwkXP7MTskKbund5/iiQ9nZnvfMhv3k+C13Jjw4xAAAADLJLYkDeUNLGEpjGiM6uzZQAAAAP5NnwAifbXppPI8GfMZ1V8CKzOvFck51I4r3uQKXiM/nd1BAk8LL+ImzV/lfl0uhHu7iHdK64qbmzXNUPZzrok</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABGgwy9MkcD0XCwTh+wBVKxZnSVmjh0SX715t+C6M+B/wAAAAAOgAAAAAIAACAAAACxE5obVWLB7oM8xK63UkXG/5/x76V7Ffbj5+k4F17ukRAAAAC7pQuLcqHSAhU255EjW8aPQAAAAI4ElGk2RUvGWdAXGWPgsKSzDsmoG3Ovf0s5mt1qUP7M2CBNxDeHpppQOPGFXv5F5pqw/ZF9PptYz7r7WNUZ4C8</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -885,16 +885,14 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select NEWID() paymentid, 
-paymentdate as Billingdate,
-ISNULL(DATEADD(MONTH, 1, duedate), GETDATE()) AS paidtodate,
- * from
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH BaseData AS
 (
-SELECT DISTINCT PLMNTH, b.Policyno, PISACT
-    , PISCUR, PISAMX, PISAFX    , a.paymentdate, newduedate 'duedate'
+	SELECT DISTINCT PLMNTH, b.Policyno, PISACT
+    , PISCUR, PISAMX, PISAFX, a.paymentdate, newduedate 'duedate'
     , 'M' ModeId, 'DBB' MethodId, 'PAI' StatusId, 'PRM' TypeId, 1 'MonthsPaid'
     , 1 'bankid', 'U' Source, CONCAT(CONVERT(VARCHAR, a.newduedate, 3),'-',b.POLICYNO) Reff
     , getdate() 'createdate', 'migrationma' 'createby', PISAMX 'basicpremium'
+	,ROW_NUMBER() OVER (PARTITION BY b.Policyno ORDER BY a.paymentdate DESC) AS rn
     from DMTM_MTR.dbo.TFPMMLD a
     inner join (select policyno, refferenceno from DMTM_New..policy where PRODUCTID in ('TRMIDR', 'TABINS_USD')
         and createby in ('migration','migrationma')
@@ -907,7 +905,13 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
         and pisopd &gt;= 1900001
         and month(a.effectivedate) = ?
         and c.paymentid is null
-) x order by x.paymentdate desc</property>
+)
+select NEWID() paymentid, 
+paymentdate as Billingdate,
+ISNULL(DATEADD(MONTH, 1, duedate), GETDATE()) AS paidtodate,
+ *
+ FROM BaseData
+ WHERE rn = 1</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1170,6 +1174,15 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[paidtodate]"
                       name="paidtodate"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rn]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rn]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rn]"
+                      name="rn"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1288,6 +1301,10 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[paidtodate]"
                       dataType="dbTimeStamp"
                       name="paidtodate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rn]"
+                      dataType="i8"
+                      name="rn" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1434,6 +1451,11 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rn]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rn]"
+                      name="rn" />
+                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
@@ -1496,13 +1518,13 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="906,169" />
-        <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="656,165" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="906,169" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
@@ -1511,6 +1533,28 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
           Size="157,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="127,167" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="284,186.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121,0"
+              Start="0,0"
+              End="113.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="814,188">
@@ -1547,28 +1591,6 @@ SELECT DISTINCT PLMNTH, b.Policyno, PISACT
                   Capacity="5">
                   <mssgle:LineSegment
                     End="82.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="284,186.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121,0"
-              Start="0,0"
-              End="113.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="113.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
