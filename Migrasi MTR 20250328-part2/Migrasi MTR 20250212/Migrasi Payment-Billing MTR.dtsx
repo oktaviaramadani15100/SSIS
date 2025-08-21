@@ -12,8 +12,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Migrasi Payment MTR"
   DTS:PackageType="5"
-  DTS:VersionBuild="136"
-  DTS:VersionGUID="{59909438-AC2E-4CFD-A511-A075421E57FB}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="137"
+  DTS:VersionGUID="{0B5ECD85-0D35-4F58-987E-308E93AF4703}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,8 +30,7 @@
           DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Persist Security Info=True;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{6FDB59C6-6AAB-481E-87FD-444141BDCE72}192.168.1.79.DMTM_New.sa;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAhrD0iXvoiyryuhphS5Ylmc71PlnT/KTt/SlscnviaAQAAAAAOgAAAAAIAACAAAAAwZx8b+nAz4DBOn56IWoewnl0fqOzqG7NEmlsQxEQ27xAAAAAo6Sz+Gqj96dq3sSMYT4bvQAAAAMNTv8w3NKDVK4NPR3i3we3Yu8fp2iakY7ssirxoHf22HTr0wt23BtmE3mqh4eNUeXUdS+QUjEN/jCjd3q3jkzs</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,8 +46,7 @@
           DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Persist Security Info=True;Locale Identifier=1033;Auto Translate=False;Application Name=SSIS-Migrasi 20250212-{B4E0811C-E498-4279-964D-4876F5B01797}192.168.1.79.DMTM_MTR.sa;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZ/btmIfQVtuaUD4X0VKQYcD7tSUF7CIxYYaEIRZXETQAAAAAOgAAAAAIAACAAAABYL3t8JSb3J977/OrVtPN5Yjo1Zf5cXTTfQ91yyqpGoBAAAADY5tfQ48D+4QvdCDBTJufvQAAAALSnQsn9tLEDAr6P8DGVJO5+CHElShzclwFHqW3JdVCkuI8/r39IsgxWxs9K5hKJaXkZmbS7LLQuD5jerDVpQpA</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3060,6 +3059,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Payment Destination">
     <Properties>
       <Property>
@@ -3069,14 +3076,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

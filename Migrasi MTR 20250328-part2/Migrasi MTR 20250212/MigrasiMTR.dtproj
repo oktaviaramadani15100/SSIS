@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{f7233125-b909-4c99-85e7-a48b6c232337}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">MigrasiMTR</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,6 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-37BL2UG</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAACAAAAAAAQZgAAAAEAACAAAAAQ9SDqE6Esi3WpedW/vzAV1i2ktdvLEZJ5z4rSR44EbAAAAAAOgAAAAAIAACAAAADWOgrCW4chHDcr0fLbbDxtfckS52vsrHcqTv3LLKVq4JAAAABwdEJLLOHG+/2w2d1u3Gt/265ECj6chZLsqp4GLCiIAAg3Uv7weIDVeYfQDN5dXV0xUiehK9jgMUrE9wVjHkvPX+OjSZQnXDpYgM08849IRLJFpt/aLtFZ3KayFNUfNhuTsahzn5Dfk02snJVIUR3NQUCwxqUaGWuwolT7lNEELRAnhyk1KjvyRC52sczDpFxAAAAAUpsp/UFHvRdbZVRaZ7kkgOyQEVpxf/GE+gz24h+MVwZNNN0436yd9V1AIKqOEeLJ/JNSmbC4kbgbDsos+YR+xA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,14 +42,14 @@
                 <SSIS:Property SSIS:Name="Name">Package2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C6FC0A1C-A2DD-4D17-9A82-148A27D901DF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A2A45717-2725-495C-BF83-45163DFBC605}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.DESKTOP-GANO9B3.DMTM_MTR.ConnectByProxy">
@@ -359,14 +358,14 @@
                 <SSIS:Property SSIS:Name="Name">Migrasi Payment MTR</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">136</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">137</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{59909438-AC2E-4CFD-A511-A075421E57FB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0B5ECD85-0D35-4F58-987E-308E93AF4703}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="MonthFilter">

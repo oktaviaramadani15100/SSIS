@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{C6FC0A1C-A2DD-4D17-9A82-148A27D901DF}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{A8890CE2-EC23-4008-BECE-751D9D5687BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +26,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}DESKTOP-GANO9B3.DMTM_MTR;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADfJaOEiiozmh1R6P1V17ZNwySfytc8SAwAlOdxU3xkQwAAAAAOgAAAAAIAACAAAABsFJ8dltiXh17pKLLSOqZ+Hd+FS1y1LebGwgabyzEoWhAAAACUcLFvLck5eADGxQKu/VCWQAAAAMr0MwoBUgueDdbHZH0d94KFYv9VggbSL+JG7fBXIeaA6jKZuunafYX3shAPhXAZRFMZYqSHkN+dzxYLmuZvUSI</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_MTR;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{07C1F3BD-06D8-42E6-9CB9-8ECE9C54F839}DESKTOP-GANO9B3.DMTM_MTR;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -42,12 +38,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{69F3BB63-B820-4298-A5DF-9213229D44D9}DESKTOP-GANO9B3.DMTM_New;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6hHRtbwJsaJbofLFcDtclgS/75Fp13zQWowXiSkaStwAAAAAOgAAAAAIAACAAAADKcLX1q6U/QqAchoubx9IK7ZavUwmK88fXBcaHngZM1RAAAAA+xwOSLg/SUJQiSIZvAD8QQAAAAFQHGjz9NA29T/9NqJj7IpIYTsOWFi5x1ceyjqC7ANOotHJSm87may1bX3UgAxb6FWZgLchzWiCx1y3E36/lIOA</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=localhost\SQL2019;User ID=sa;Initial Catalog=DMTM_New;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package2-{69F3BB63-B820-4298-A5DF-9213229D44D9}DESKTOP-GANO9B3.DMTM_New;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -86,7 +77,7 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <ExecuteOutOfProcess>True</ExecuteOutOfProcess>
-          <PackageName>Migrasi Payment MTR.dtsx</PackageName>
+          <PackageName>Migrasi Payment-Billing MTR.dtsx</PackageName>
           <ParameterAssignment>
             <ParameterName>MonthFilter</ParameterName>
             <BindedVariableOrParameterName>User::MonthFilter</BindedVariableOrParameterName>
