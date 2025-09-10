@@ -2,24 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>MigrasiMTR</Name>
-    <LastWriteTime>2025-08-20T02:22:17.6861194Z</LastWriteTime>
-    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    <LastWriteTime>2025-08-21T06:39:50.2935246Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>3EjOxmM6</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAACAAAAAAAQZgAAAAEAACAAAABhtgzhthuyW19BRSkgMqexSJO7htoa3i/g5IWEXpXQHwAAAAAOgAAAAAIAACAAAABOXq0C5vg0Bv2IdtYFC1HMWGclTSV5LNBQkFVG8v+7wjAAAADus1AiXlJHJuAZQvXuKGxU3jcPXo/Xp5LKSxUf6pmDidpuv19RNSvgL8sGVMoKsbBAAAAAt4WcPYqEdLRaEDi7Cn9LqMKhKAn8mMxzD0s/dGYjEYvk4zLICoAC7u8Cjzlg7on7IknkbahcWYC3adKYf8iZng==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Migrasi Payment MTR.dtsx</Name>
-      <LastWriteTime>2025-08-20T09:27:14.9158367Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Migrasi Billing MTR.dtsx</Name>
-      <LastWriteTime>2025-08-20T02:21:11.3856086Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Main Migrasi.dtsx</Name>
-      <LastWriteTime>2025-08-20T09:01:32.8261285Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <Name>Migrasi Payment-Billing MTR.dtsx</Name>
+      <LastWriteTime>2025-08-21T06:39:50.1792428Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>NxBRXErZ</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATup8zMlzdEaomY98OAD13wAAAAACAAAAAAAQZgAAAAEAACAAAADUNSzNPNzKxt+2ACjsxsVIlUMwr1UmHqMdyVUhW2xE5wAAAAAOgAAAAAIAACAAAADyufttuG+OV5+2QGXlMwvFmLG9hc4JWz2sm9yieefQ7jAAAADa86z7Otl8Sqy6+e7C0HU0pVLJ0RUtMQjr/eCyz5j+DyoKc+enfnY2h8MwZq2OdJVAAAAAL1Hn9uNaOPMZBQGa9vw8Jv8UhKluxkk4xuhPu0HEq6/jGfODk6mwmrTIswbCuRheaVc7RAaqOqYF7DauNIG6hw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
